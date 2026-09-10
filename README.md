@@ -3,14 +3,16 @@ Mac setup and config using Brew and Ansible
 
 ## Scripts
 
-### `scripts/brew_upgrade_cleanup.sh`
-Prompts for confirmation, then runs `brew update`, `brew upgrade`, `brew cleanup`, and `brew doctor`.
-
 ```
 ./scripts/brew_upgrade_cleanup.sh
 ```
+Prompts for confirmation, then runs `brew update`, `brew upgrade`, `brew cleanup`, and `brew doctor`.
 
-### `scripts/brew_upgrade_prompt.sh`
+<br>
+
+```
+`scripts/brew_upgrade_prompt.sh`
+```
 Opens `brew_upgrade_cleanup.sh` in an iTerm2 tab (reusing the current window if one's open, otherwise a new window). Falls back to Terminal.app if iTerm2 isn't installed. Intended to be triggered on a schedule (e.g. cron) so maintenance is offered periodically without running unattended.
 
 If you use a different terminal app (Warp, Kitty, Alacritty, etc.) instead of iTerm2, the prompt will still open — just in Terminal.app rather than your usual terminal, since that's the only other app this script targets.
